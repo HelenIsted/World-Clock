@@ -24,3 +24,22 @@ setInterval(function () {
   parisDateElement.innerHTML = parisTime.format("dddd Do MMMM YYYY");
   parisTimeElement.innerHTML = parisTime.format("h:mm:s[<small>]a[</small>]");
 }, 1000);
+
+//Select
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `<div class="city">
+          <div>
+            <h2>${cityTimeZone}</h2>
+
+            <div class="date">${cityTime.format("ddd Do MMMM YYYY")}</div>
+          </div>
+          <div class="time">${cityTime.format(
+            "h:mm:s[<small>]a[</small>]"
+          )}</div>
+        </div>`;
+}
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
