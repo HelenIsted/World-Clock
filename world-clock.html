@@ -5,10 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🕰️Helen Isted-World Clock🕰️</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>World Clock</h1>
+    <div class="container">
+      <h1>World Clock</h1>
+      <form action="/submit">
+        <select name="city" id="city">
+          <option value="">Select a City</option>
+          <option value="Europe/Paris">Paris</option>
+          <option value="Australia/Sydney">Sydney</option>
+          <option value="Asia/Tokyo">Tokyo</option>
+          <option value="America/Chicago">Chicago</option>
+          <option value="Africa/Johannesburg">Johannesburg</option>
+          <option value="Asia/Istanbul">Istanbul</option>
+        </select>
+      </form>
+      <div class="city">
+        <div>
+          <h2>Manchester</h2>
 
+          <div class="date">Friday 2nd February 2024</div>
+        </div>
+        <div class="time">11:23<small>am</small></div>
+      </div>
+      <div class="city">
+        <div>
+          <h2>Sydney</h2>
+
+          <div class="date">Friday 2nd February 2024</div>
+        </div>
+        <div class="time">11:23<small>am</small></div>
+      </div>
+      <div class="city">
+        <div>
+          <h2>Paris</h2>
+
+          <div class="date">Friday 2nd February 2024</div>
+        </div>
+        <div class="time">11:23<small>am</small></div>
+      </div>
+    </div>
     <footer>
       This project was coded by
       <a href="https://www.linkedin.com/in/helen-isted/" target="_blank"
